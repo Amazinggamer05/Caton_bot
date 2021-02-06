@@ -7,7 +7,6 @@ answers = "A monoracial sacrificial orgy.", "A pool table."
 
 client = commands.Bot(command_prefix="!")
 
-
 def rand(min1, max2):
     randomnum = random.randint(min1, max2 * max2 - min1 + min1) * (max2 - min1) + min1
     return round(randomnum)

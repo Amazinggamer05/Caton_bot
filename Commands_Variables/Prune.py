@@ -9,7 +9,7 @@ async def prune(message):
     if message.memeber.hasPermission("Manage Message"):
         amount = int(message) + 1
 
-        if math.isnan(amount) or amount < 2 or amount > 100:
+        if isnan(amount) or amount < 2 or amount > 100:
             return message.reply("THAts not A vaLId intEGer NIGba. \nGOTa be 1 - 99")
 
     else:

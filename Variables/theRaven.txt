@@ -1,8 +1,4 @@
-from discord.ext import commands
-import random
-
-theRaven = """
-   Once upon a midnight dreary, while I pondered, weak and weary,
+Once upon a midnight dreary, while I pondered, weak and weary,
 Over many a quaint and curious volume of forgotten lore—
     While I nodded, nearly napping, suddenly there came a tapping,
 As of some one gently rapping, rapping at my chamber door.
@@ -35,9 +31,9 @@ Doubting, dreaming dreams no mortal ever dared to dream before;
     But the silence was unbroken, and the stillness gave no token,
     And the only word there spoken was the whispered word, “Lenore?”
 This I whispered, and an echo murmured back the word, “Lenore!”—
-            Merely this and nothing more.,"""
+            Merely this and nothing more.,
 
-theRaven_2 = """ Back into the chamber turning, all my soul within me burning,
+    Back into the chamber turning, all my soul within me burning,
 Soon again I heard a tapping somewhat louder than before.
     “Surely,” said I, “surely that is something at my window lattice;
       Let me see, then, what thereat is, and this mystery explore—
@@ -70,9 +66,9 @@ That one word, as if his soul in that one word he did outpour.
     Nothing farther then he uttered—not a feather then he fluttered—
     Till I scarcely more than muttered “Other friends have flown before—
 On the morrow he will leave me, as my Hopes have flown before.”
-            Then the bird said “Nevermore.”,"""
+            Then the bird said “Nevermore.”,
 
-theRaven_3 = """Startled at the stillness broken by reply so aptly spoken,
+    Startled at the stillness broken by reply so aptly spoken,
 “Doubtless,” said I, “what it utters is its only stock and store
     Caught from some unhappy master whom unmerciful Disaster
     Followed fast and followed faster till his songs one burden bore—
@@ -98,9 +94,9 @@ Swung by Seraphim whose foot-falls tinkled on the tufted floor.
     “Wretch,” I cried, “thy God hath lent thee—by these angels he hath sent thee
     Respite—respite and nepenthe from thy memories of Lenore;
 Quaff, oh quaff this kind nepenthe and forget this lost Lenore!”
-            Quoth the Raven “Nevermore.”,"""
+            Quoth the Raven “Nevermore.”,
 
-theRaven_4 = """“Prophet!” said I, “thing of evil!—prophet still, if bird or devil!—
+    “Prophet!” said I, “thing of evil!—prophet still, if bird or devil!—
 Whether Tempter sent, or whether tempest tossed thee here ashore,
     Desolate yet all undaunted, on this desert land enchanted—
     On this home by Horror haunted—tell me truly, I implore—
@@ -126,17 +122,4 @@ On the pallid bust of Pallas just above my chamber door;
     And his eyes have all the seeming of a demon’s that is dreaming,
     And the lamp-light o’er him streaming throws his shadow on the floor;
 And my soul from out that shadow that lies floating on the floor
-            Shall be lifted—nevermore!"""
-
-
-client = commands.Bot(command_prefix="!")
-
-
-def rand(min1, max2):
-    randomnum = random.randint(min1, max2 * max2 - min1 + min1) * (max2 - min1) + min1
-    return round(randomnum)
-
-
-@client.command(name="poe", description="Poetic genius", aliases=["poetry", "edgar", "alan"], cooldown=3)
-async def Play(message):
-    await message.channel.send(theRaven[rand(0, len(theRaven))])
+            Shall be lifted—nevermore!
