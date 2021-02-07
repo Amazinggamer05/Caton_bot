@@ -1,15 +1,3 @@
-from discord.ext import commands
-
-import random
-
-client = commands.Bot(command_prefix="!")
-
-
-def rand(min1, max2):
-    randomnum = random.randint(min1, max2 * max2 - min1 + min1) * (max2 - min1) + min1
-    return round(randomnum)
-
-
 truth = """  "The word "Poem" originates from Edgar Allan "Poe".",
             "Gay people are allergic to salt.",
             'Black people are statistically more likely to commit crimes.',
@@ -55,8 +43,3 @@ truth_2 = """
             "If you make a snowman out of cheese, you've made a terrible mistake.",
             "The 'e' in "e-learning" stands for Edward.",
             "If you're attacked by a crocodile, just shoot your gun into its face, thereby incapacitating it." """""
-
-
-@client.command(name = "troofax", description = "Spits FAX", aliases = ["truth", "truefacts", "fax", "facts"], cooldown = 1)
-async def troofax(message):
-    message.channel.send("BreD's Troo FACt: " + truth[rand(0, len(truth) - 1)])

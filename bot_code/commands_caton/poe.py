@@ -1,10 +1,9 @@
-from discord.ext import commands
-import random
 
-with open("..") as file:
-	data = file.read()
+#with open("variables/the_raven.txt") as file:
+	#data = file.read()
+	
 
-theRaven = """
+theraven = """
    Once upon a midnight dreary, while I pondered, weak and weary,
 Over many a quaint and curious volume of forgotten lore—
     While I nodded, nearly napping, suddenly there came a tapping,
@@ -40,7 +39,7 @@ Doubting, dreaming dreams no mortal ever dared to dream before;
 This I whispered, and an echo murmured back the word, “Lenore!”—
             Merely this and nothing more.,"""
 
-theRaven_2 = """ Back into the chamber turning, all my soul within me burning,
+theraven_2 = """ Back into the chamber turning, all my soul within me burning,
 Soon again I heard a tapping somewhat louder than before.
     “Surely,” said I, “surely that is something at my window lattice;
       Let me see, then, what thereat is, and this mystery explore—
@@ -75,7 +74,7 @@ That one word, as if his soul in that one word he did outpour.
 On the morrow he will leave me, as my Hopes have flown before.”
             Then the bird said “Nevermore.”,"""
 
-theRaven_3 = """Startled at the stillness broken by reply so aptly spoken,
+theraven_3 = """Startled at the stillness broken by reply so aptly spoken,
 “Doubtless,” said I, “what it utters is its only stock and store
     Caught from some unhappy master whom unmerciful Disaster
     Followed fast and followed faster till his songs one burden bore—
@@ -103,7 +102,7 @@ Swung by Seraphim whose foot-falls tinkled on the tufted floor.
 Quaff, oh quaff this kind nepenthe and forget this lost Lenore!”
             Quoth the Raven “Nevermore.”,"""
 
-theRaven_4 = """“Prophet!” said I, “thing of evil!—prophet still, if bird or devil!—
+theraven_4 = """“Prophet!” said I, “thing of evil!—prophet still, if bird or devil!—
 Whether Tempter sent, or whether tempest tossed thee here ashore,
     Desolate yet all undaunted, on this desert land enchanted—
     On this home by Horror haunted—tell me truly, I implore—
@@ -131,15 +130,3 @@ On the pallid bust of Pallas just above my chamber door;
 And my soul from out that shadow that lies floating on the floor
             Shall be lifted—nevermore!"""
 
-
-client = commands.Bot(command_prefix="!")
-
-
-def rand(min1, max2):
-    randomnum = random.randint(min1, max2 * max2 - min1 + min1) * (max2 - min1) + min1
-    return round(randomnum)
-
-
-@client.command(name="poe", description="Poetic genius", aliases=["poetry", "edgar", "alan"], cooldown=3)
-async def Play(message):
-    await message.channel.send(theRaven[rand(0, len(theRaven))])
