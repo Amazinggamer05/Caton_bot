@@ -2,10 +2,11 @@ import discord
 import random
 from discord.ext import commands
 from discord.ext.commands import cooldown, CommandOnCooldown
-from Commands_Variables.Poe import *
-from Commands_Variables.Riddle import *
-from Commands_Variables.troofax import *
-from Commands_Variables.Spek import *
+from commands.poe import *
+from commands_variables.riddle import *
+from commands_variables.troofax import *
+from commands_variables.spek import *
+
 
 # ToDo: Add Riddle, prune, playa,
 # ToDo: Later add help and fix other commands to do actual functions
@@ -105,4 +106,4 @@ async def cool(ctx):
     await ctx.channel.send(CommandOnCooldown)
 
 
-client.run('ODA0NzQ4NjIwNjQ1NDAwNjI2.YBQ2jg.OhvVsJCp9NUarI7e6QP0AeRg6Ps')
+client.run('ODA0NzQ4NjIwNjQ1NDAwNjI2.YBQ2jg.a9ERU2mtf1N3OaUXTm58OxHCDxw')
